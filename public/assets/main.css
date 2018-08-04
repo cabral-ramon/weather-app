@@ -1,0 +1,23 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.title {
+  color: black;
+}
+
+.bg-primary {
+  background-color: rgb(60, 39, 107) !important;
+}
+
+.bg-secondary {
+  background-color: rgb(65, 26, 151) !important;
+}
+
+#footer-nav-container {
+  justify-content: center;
+}
+
+#footer-nav {
+  flex-direction: row;
+}
