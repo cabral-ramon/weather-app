@@ -11,7 +11,7 @@ function getWindDirection(deg) {
     return "South";
   } else if (deg >= 191.25 && deg < 236.26) {
     return "South West";
-  } else if (deg >= 191.25 && deg < 236.26) {
+  } else if (deg >= 236.26 && deg < 281.25) {
     return "West";
   } else if (deg >= 281.25 && deg < 303.75) {
     return "North West";
@@ -20,6 +20,24 @@ function getWindDirection(deg) {
   }
 }
 
+function getImagePath(location) {
+  switch (location) {
+    case "New York":
+      return "../../assets/images/newyork1.jpg";
+    case "Sydney":
+      return "../../assets/images/sydney1.jpg";
+    case "London":
+      return "../../assets/images/london1.jpg";
+    case "Hong Kong":
+      return "../../assets/images/hongkong1.jpg";
+    case "Tokyo":
+      return "../../assets/images/tokyo1.jpg";
+    default:
+      return "../../assets/images/default.jpg";
+  }
+}
+
 module.exports = {
-  getWindDirection: getWindDirection
+  getWindDirection,
+  getImagePath
 };
