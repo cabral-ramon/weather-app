@@ -1,6 +1,6 @@
 const axios = require("axios");
 const URL = "http://api.openweathermap.org/data/2.5/weather?q=";
-const APIKEY = "&appid=1305c0147606a9a35b3081e8e1581bbc";
+const APIKEY = process.env.APIKEY || require("./secrets.json").APIKEY;
 const PARAMOPTIONS = "&units=imperial";
 
 function fetchCurrentWeatherData(location = "London") {
