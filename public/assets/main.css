@@ -11,7 +11,21 @@ body {
 }
 
 .bg-secondary {
-  background-color: rgb(65, 26, 151) !important;
+  background-color: #d2c8dc !important;
+}
+
+#header {
+  margin-top: 50px;
+  background-color: inherit !important;
+}
+
+#weather-info {
+  height: fit-content;
+  align-self: center;
+}
+
+#signup-container {
+  padding: 50px;
 }
 
 #footer-nav-container {

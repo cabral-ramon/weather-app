@@ -8,13 +8,21 @@ const fetchData = (location, page, res) => {
         city: location,
         img: getImagePath(location),
         main: response.weather[0].main,
-        temp: response.main.temp,
+        iconUrl: `http://openweathermap.org/img/w/${
+          response.weather[0].icon
+        }.png`,
+        temp: Math.ceil(response.main.temp),
         humidity: response.main.humidity,
-        wind: response.wind.speed,
+        wind: Math.floor(response.wind.speed),
         windDir: getWindDirection(response.wind.deg)
       });
     })
-    .catch(err => console.log(err));
+    .catch(err =>
+      res.render("pages/404", {
+        error: `404 not found: Sorry we could not find information for ${location}`,
+        imgUrl: "../../assets/images/404.jpg"
+      })
+    );
 };
 
 module.exports = {
