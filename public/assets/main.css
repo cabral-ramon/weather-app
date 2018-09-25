@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .title {
@@ -34,4 +34,8 @@ body {
 
 #footer-nav {
   flex-direction: row;
+}
+
+.text-container {
+  padding: 0px 20px;
 }
